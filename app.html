@@ -1,0 +1,45 @@
+
+<h1>User Management System</h1>
+
+<div class="card">
+  <h2>User Registration</h2>
+
+  <input
+    [(ngModel)]="username"
+    placeholder="Enter username">
+
+  <input
+    [(ngModel)]="email"
+    type="email"
+    placeholder="Enter email">
+
+  <input
+    [(ngModel)]="password"
+    type="password"
+    placeholder="Enter password">
+
+  <button (click)="register()">Register</button>
+</div>
+
+<div class="card">
+  <h2>User Login</h2>
+
+  <input
+    [(ngModel)]="loginEmail"
+    placeholder="Enter email">
+
+  <input
+    [(ngModel)]="loginPassword"
+    type="password"
+    placeholder="Enter password">
+
+  <button (click)="login()">Login</button>
+</div>
+
+<p>{{ message }}</p>
+
+<div class="card" *ngIf="user">
+  <h2>User Profile</h2>
+  <p><b>Username:</b> {{ user.username }}</p>
+  <p><b>Email:</b> {{ user.email }}</p>
+</div>
